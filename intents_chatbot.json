@@ -4,10 +4,26 @@
          "responses": ["Hello, I'm a COVID-19 HealthBot.\nType Menu to see the services we provide"],
          "context": [""]
         },
+		
+		{"tag": "Yes",
+         "patterns": ["Yes","I need more information"],
+         "responses": ["Sure, what information you need ?"],
+         "context": [""]
+        },
+		{"tag": "No",
+         "patterns": ["No","I am good, thank you","nope","No, thanks"],
+         "responses": ["Alright then, Good Bye!"],
+         "context": [""]
+        },
     
         {"tag": "Menu",
          "patterns": ["Menu","menu","what is the menu","What services do you provide", "services"],
          "responses": ["COVID-19 Information \n Find Hospitals \n Type the service you want to access"],
+         "context": [""]
+        },
+		{"tag": "Call",
+         "patterns": ["Call me","Can you talk to me","I need your number","Give me your contact"],
+         "responses": ["I am sorry, My voice is not right. but I can text back to you. Do you need anything else ? "],
          "context": [""]
         },
     
@@ -58,13 +74,13 @@
         },
         
         {"tag": "protect",
-         "patterns": ["What can I do to protect myself andProtection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading prevent the spread of disease?", "How can I protect myself?", "How to protect myself from corona virus" ],
+         "patterns": ["What can I do to protect myself andProtection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading prevent the spread of disease?", "How can I protect myself?", "How to protect myself from corona virus", "How to be safe from covid","How to protect my kids from covid","how to protect my parents from covid"],
          "responses": ["Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately. Self-isolate by staying at home if you begin to feel unwell, even with mild symptoms such as headache, low grade fever (37.3 C or above) and slight runny nose, until you recover."],
          "context": [""]
         },
     
         {"tag": "highrisk_covid",
-         "patterns": ["Who are at high risk?", "who are at high risk of covid" ],
+         "patterns": ["Who are at high risk?", "who are at high risk of covid"],
          "responses": ["People at increased risk include: Older adults People of all ages with certain underlying medical conditions Pregnant people might also be at increased risk of severe illness from COVID-19. Long-standing systemic health and social inequities have put many people from racial and ethnic minority groups at increased risk of getting sick and dying from COVID-19. In addition to those at increased risk, there are certain groups of people who require extra precautions during the pandemic."],
          "context": [""]
         },
@@ -76,7 +92,7 @@
         },
     
         {"tag": "animals",
-         "patterns": ["Does animals get COVID?","Does pets catch covid?" ],
+         "patterns": ["Does animals get COVID?","Does pets catch covid?","Can my pet get covid","Can my dog get covid?","Can my cat get covid?"],
          "responses": ["Coronaviruses are a large group of viruses that cause diseases in animals and humans. They often circulate among camels, cats, and bats, and can sometimes evolve and infect people. In animals, coronaviruses can cause diarrhea in cows and pigs, and upper respiratory disease in chickens."],
          "context": [""]
         },
@@ -88,8 +104,6 @@
          "context": [""]
         },
     
-        
-        
         {"tag": "adverse_drug",
          "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
          "responses": ["Navigating to Adverse drug reaction module"],
@@ -120,14 +134,8 @@
          "responses": ["Loading pharmacy details"],
          "context": [""]
         },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-    
         {"tag": "hospitals",
-         "patterns": ["Can you show hospitals near me?"],
+         "patterns": ["Can you show hospitals near me?","Show hospitals near me","Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details","Around me"],
          "responses": ["Please provide Zipcode"],
          "context": [""]
         },
